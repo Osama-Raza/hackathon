@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(.specify/scripts/bash/create-adr.sh:*)",
+      "Bash(E:/Gemini/hackathon/.specify/scripts/bash/create-phr.sh:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
