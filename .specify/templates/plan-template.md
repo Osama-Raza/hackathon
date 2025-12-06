@@ -31,7 +31,14 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Clear, Structured, and Instructional Writing: Plan must ensure documentation adheres to these standards.
+- [ ] Consistency with Spec-Driven Development: Plan must align with SDD methodology.
+- [ ] Accuracy and Verifiability: Plan must outline how claims and examples will be verified.
+- [ ] Practical, Example-Driven Explanations: Plan must include how practical examples will be integrated.
+- [ ] Modular Content: Plan must ensure content structure supports Docusaurus modularity.
+- [ ] Key Standards: Plan must reference and ensure adherence to documented key standards (e.g., Flesch-Kincaid, Docusaurus Markdown).
+- [ ] Constraints: Plan must address and respect all defined constraints (e.g., chapter word limits, output format).
+- [ ] Success Criteria: Plan must define how to meet the measurable success criteria outlined in the constitution.
 
 ## Project Structure
 

@@ -113,3 +113,17 @@
 - **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
 - **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
 - **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+
+## Documentation Principles Adherence *(mandatory)*
+
+*GATE: This specification MUST adhere to the documentation principles outlined in the project constitution.*
+
+- [ ] Clear, Structured, and Instructional: Content is easy for beginners to understand and navigate.
+- [ ] Consistent with SDD: The specification aligns with Spec-Driven Development methodology.
+- [ ] Accurate and Verifiable: All claims and requirements are factual and can be verified.
+- [ ] Practical & Example-Driven: Where applicable, explanations include practical examples or use cases.
+- [ ] Modular Content: Structure supports modularity, suitable for integration into Docusaurus-like documentation.
+- [ ] Key Standards Adherence: Follows defined key standards (e.g., Flesch-Kincaid readability, Docusaurus Markdown).
+- [ ] Constraints Respected: Adheres to all writing and structural constraints (e.g., chapter word limits, output format).
+- [ ] Success Criteria Met: The specification implicitly supports achieving the success criteria for the overall documentation project.
+

@@ -207,4 +207,4 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 - `.specify/` — SpecKit Plus templates and scripts
 
 ## Code Standards
-See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+This project adheres to the principles and standards defined in the project constitution (`.specify/memory/constitution.md`), covering aspects like code quality, testing, performance, security, and architecture.

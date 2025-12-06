@@ -1,55 +1,70 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+Version change: None (initial creation) → 1.0.0 (MINOR: Initial constitution with core principles)
+Modified principles: None
+Added sections:
+- Clear, Structured, and Instructional Writing
+- Consistency with Spec-Driven Development
+- Accuracy and Verifiability
+- Practical, Example-Driven Explanations
+- Modular Content
+- Key Standards
+- Constraints
+- Success Criteria
+- Governance
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md: ⚠ pending
+- .specify/templates/spec-template.md: ⚠ pending
+- .specify/templates/tasks-template.md: ⚠ pending
+- CLAUDE.md: ⚠ pending
+- .specify/templates/commands/sp.constitution.md: ✅ updated (this file)
+Follow-up TODOs:
+- RATIFICATION_DATE: Unknown initial adoption date
+-->
+# AI-Driven Development Documentation Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Clear, Structured, and Instructional Writing
+Clear, structured, and instructional writing for beginners in AI-Driven Development.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Consistency with Spec-Driven Development
+Consistency with Spec-Driven Development methodology.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Accuracy and Verifiability
+Accuracy: all claims must be verifiable.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Practical, Example-Driven Explanations
+Practical, example-driven explanations.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Modular Content
+Modular content suitable for Docusaurus docs structure.
 
-### [PRINCIPLE_6_NAME]
+## Key Standards
 
+Source references required for factual claims.
+Writing level: Flesch-Kincaid grade 8–10.
+Follow Docusaurus Markdown formatting.
+Include examples, diagrams, or code blocks where relevant.
+Maintain uniform tone across all chapters.
 
-[PRINCIPLE__DESCRIPTION]
+## Constraints
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+Each chapter: 600–1200 words.
+Entire book: multi-page Docusaurus structure.
+Output must be clean Markdown, ready for GitHub Pages.
+No plagiarism; all content must be original.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Success Criteria
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Book compiles cleanly in Docusaurus.
+Content is accurate, structured, and beginner-friendly.
+All chapters follow the same style guide.
+Ready for deployment to GitHub Pages using CI/CD.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This Constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews must verify compliance. Complexity must be justified.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Unknown initial adoption date | **Last Amended**: 2025-12-05
