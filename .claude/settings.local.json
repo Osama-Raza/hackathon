@@ -3,7 +3,10 @@
     "allow": [
       "Bash(.specify/scripts/bash/create-phr.sh:*)",
       "Bash(.specify/scripts/bash/create-adr.sh:*)",
-      "Bash(E:/Gemini/hackathon/.specify/scripts/bash/create-phr.sh:*)"
+      "Bash(E:/Gemini/hackathon/.specify/scripts/bash/create-phr.sh:*)",
+      "Bash(npm run test-build)",
+      "Bash(chmod +x scripts/setup_ros_env.sh)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks)"
     ],
     "deny": [],
     "ask": []

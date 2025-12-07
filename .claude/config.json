@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "context7": {
+      "enabled": true,
+      "description": "Context7 MCP Server for Docusaurus documentation",
+      "endpoint": "https://context7.example.com",
+      "apiVersion": "v1",
+      "timeout": 30000
+    }
+  },
+  "context7": {
+    "enabled": true,
+    "defaultLibrary": "/docusaurus/docs",
+    "mode": "code",
+    "documentationAccess": true
+  }
+}
