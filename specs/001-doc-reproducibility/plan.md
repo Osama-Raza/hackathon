@@ -66,14 +66,32 @@ The top-level sections of the book will be based on the following 13-week curric
 **Format**: Step-by-step process.
 
 **Key Activities**:
-1.  **Utilizing Context7 for Docusaurus Documentation**:
-    *   Regularly query the Context7 MCP Server for Docusaurus official documentation, focusing on:
-        *   Configuration syntax (`Docusaurus config file patterns`)
-        *   Sidebar structure (`Sidebar examples and best practices`)
-        *   MDX rules (`MDX syntax and component usage`)
-        *   Component usage (`Built-in and custom component examples`)
-        *   Theme customization examples (`Theme styling and override patterns`)
-    *   Integrate the learned patterns directly into the documentation generation process within Claude Code.
+### Utilizing Context7 for Docusaurus Documentation
+
+- The system MUST query the Context7 MCP Server at the beginning of each major writing phase:
+  - *Research Phase* – Retrieve latest Docusaurus configuration rules, MDX syntax, and component usage.
+  - *Foundation Phase* – Retrieve sidebar patterns, file structures, and theme customization references.
+  - *Analysis Phase* – Retrieve examples necessary to support architectural decisions.
+  - *Synthesis (Writing) Phase* – Retrieve code snippets and patterns needed for each new chapter.
+
+- The system MUST re-query Context7 whenever:
+  1. A new Docusaurus feature or update is detected.
+  2. A configuration file needs creation or validation.
+  3. A theme override or custom component is being added.
+  4. MDX syntax guidance or component usage is required.
+  5. A version change affects structure, config, or theme API.
+
+- Application of Context7 patterns MUST occur:
+  - Immediately during content generation.
+  - At the moment a related file or section is being written (e.g., sidebar, hero component, MDX examples).
+  - Before finalizing or approving each chapter.
+  - During validation to ensure compliance with Docusaurus best practices.
+
+- Each generated file (config files, MDX pages, components) MUST include:
+  - Verified syntax retrieved from Context7.
+  - Updated examples aligned with current Docusaurus standards.
+  - Any relevant configuration or theme patterns retrieved during querying.
+  
 2.  **Exploring ROS 2 Documentation for Full Path Structures**:
     *   Research best practices and official guidelines for specifying full path structures within URDF, SDF, and launch files in ROS 2 Humble.
     *   Investigate mechanisms for ensuring these paths are robust and resolve correctly across different environments, especially considering the Ubuntu 22.04 baseline.
@@ -104,9 +122,17 @@ The top-level sections of the book will be based on the following 13-week curric
 **Goal**: Identify architectural decisions made during planning that require formal ADRs.
 **Format**: List of potential ADR titles with brief rationale.
 
--   ### [ADR-0001: Choice of Docusaurus Version/Theme](/history/adr/0001-choice-of-docusaurus-version-and-theme.md): Rationale for selecting a specific Docusaurus version and theme, including considerations for maintainability, features, and alignment with project aesthetic goals.
--   ### [Strategy for Managing ROS 2 Environment Dependencies](/history/adr/0002-ros-2-environment-dependency-management-strategy.md): Decision on how to ensure consistent and reproducible ROS 2 environments for examples, including the use of `rosdep`, `colcon`, or potential containerization solutions.
--   ### [Integration Approach for Context7 MCP Server](/history/adr/0003-context7-mcp-server-integration-approach.md): Details on how Claude CLI will integrate with and consume information from the Context7 MCP Server, including caching strategies, error handling, and frequency of updates.
+-   ### [ADR-0001: Choice of Docusaurus Version/Theme](history/adr/0001-choice-of-docusaurus-version-and-theme.md): Rationale for selecting Docusaurus v3.x with classic theme as the base platform, including considerations for maintainability, features, upgrade path, and custom styling capabilities to support modern UX requirements.
+-   ### [Strategy for Managing ROS 2 Environment Dependencies](history/adr/0002-ros-2-environment-dependency-management-strategy.md): Decision on how to ensure consistent and reproducible ROS 2 environments for examples, including the use of `rosdep`, `colcon`, or potential containerization solutions.
+-   ### [Integration Approach for Context7 MCP Server](history/adr/0003-context7-mcp-server-integration-approach.md): Details on how Claude CLI will integrate with and consume information from the Context7 MCP Server, including caching strategies, error handling, and frequency of updates.
+-   ### [ADR-0004: Custom Homepage Design and Styling Strategy](history/adr/0004-custom-homepage-design-and-styling-strategy.md)
+    Decision on implementing custom homepage with hero section and feature cards vs. using default Docusaurus landing page. Includes rationale for:
+    - Custom CSS approach vs. theme swizzling vs. complete custom theme
+    - Color scheme and dark mode implementation strategy
+    - Component architecture for reusable UI elements (hero, feature cards, tabbed code)
+    - Performance optimization techniques (lazy loading, image optimization)
+    - Responsive design implementation approach
+    - Trade-offs between visual appeal and maintainability
 
 ## VI. Testing Strategy
 **Goal**: Describe how the documentation and its examples will be tested.
@@ -127,11 +153,15 @@ The top-level sections of the book will be based on the following 13-week curric
 **Format**: High-level phases with major milestones.
 
 **Phase 1: Setup & Tooling**
-- **Milestone**: Claude CLI configured with Context7 access, basic Docusaurus project structure initialized.
+- **Milestone**: Claude CLI configured with Context7 access, basic Docusaurus project structure initialized, implement custom styling and landing page.
 - **Major Activities**:
     - Ensure Claude CLI can access and query Context7 MCP Server.
     - Initialize a basic Docusaurus project.
     - Set up version control and initial repository structure.
+    - Design and implement custom homepage with hero section
+    - Create custom.css with brand colors and typography
+    - Build feature cards component for landing page
+    - Add project logo and favicon
 
 **Phase 2: Core Documentation Infrastructure**
 - **Milestone**: Docusaurus site capable of building and deploying to GitHub Pages, basic content structure defined.

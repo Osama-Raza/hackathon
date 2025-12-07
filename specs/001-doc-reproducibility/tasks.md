@@ -27,32 +27,88 @@ description: "Task list for Documentation Reproducibility feature implementation
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-**Purpose**: Project initialization and basic structure
+### Design & Branding (Week 1)
 
-- [ ] T001 Initialize Docusaurus project in `docs/`
-- [ ] T002 Configure Claude CLI Context7 MCP Server access in `.claude/config.json`
-- [ ] T003 [P] Set up initial Docusaurus site structure (sidebar, config) in `docs/`
-- [ ] T004 [P] Configure Docusaurus theme customization in `docs/src/css/custom.css`
-- [ ] T005 [P] Implement MDX components for common documentation patterns in `docs/src/components/`
+- [ ] *T101:* Design color scheme and typography guidelines
+  - Define primary, secondary, accent colors
+  - Choose fonts (headings, body, code)
+  - Document in design-system.md
 
----
+- [ ] *T102:* Create or source project logo
+  - SVG format for scalability
+  - Light and dark mode variants
+  - Favicon (16x16, 32x32, 192x192)
 
-## Phase 2: Foundational (Blocking Prerequisites)
+- [ ] *T103:* Build custom hero section component
+  - Project title and tagline
+  - "Get Started" and "View on GitHub" buttons
+  - Gradient background with animation
+  - File: src/components/HomepageHero/index.tsx
 
+- [ ] *T104:* Create feature cards component
+  - Grid layout (responsive)
+  - 5 cards: ROS 2, Gazebo, Isaac, Humanoid, Conversational AI
+  - Icons and descriptions
+  - File: src/components/HomepageFeatures/index.tsx
 
+- [ ] *T105:* Implement homepage layout
+  - Hero section at top
+  - Feature cards below
+  - "Why Physical AI?" section
+  - File: src/pages/index.tsx
 
-**Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
+- [ ] *T106:* Write custom.css with brand styles
+  - CSS variables for colors
+  - Dark mode overrides
+  - Typography rules
+  - File: src/css/custom.css
 
-**⚠️ CRITICAL**: No user story work can begin until this phase is complete
+- [ ] *T107:* Customize navbar styling
+  - Add project logo
+  - Style navigation items
+  - Mobile menu responsiveness
+  - Update: docusaurus.config.js
 
-- [ ] T006 Configure Docusaurus build process and verify success locally in `package.json` and `docusaurus.config.js`
-- [ ] T007 Set up CI/CD for automated deployment to GitHub Pages in `.github/workflows/deploy.yml`
-- [ ] T008 Create automated script for provisioning Ubuntu 22.04 + ROS 2 Humble environment in `scripts/setup_ros_env.sh`
-- [ ] T009 Implement a mechanism within Claude Code to fetch and apply Context7 Docusaurus patterns to `docs/` files
+- [ ] *T108:* Style documentation pages
+  - Code block theming
+  - Admonition styling
+  - Table of contents
+  - Update: src/css/custom.css
 
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
 ## Content Creation Tasks (Phase 2)
+
+### Phase 2: Content Creation (Weeks 2-10)
+
+*Goals:*
+- Write all 13 chapters
+- Create code examples
+- Generate diagrams
+- Integrate hardware requirements
+
+*Standards and References to Follow:*  ← ADD THIS
+
+*ROS 2 and Robot Description Standards:*
+- *URDF Format*: Follow ROS 2 Humble URDF specification (https://docs.ros.org/en/humble/Tutorials/Intermediate/URDF/URDF-Main.html)
+- *SDF Format*: Use SDF 1.9 for Gazebo compatibility (http://sdformat.org/spec?ver=1.9)
+- *Path Structures*:
+  - URDF files: <package_name>/urdf/<robot_name>.urdf.xacro
+  - Mesh files: <package_name>/meshes/<robot_name>/<mesh_file>.stl
+  - Launch files: <package_name>/launch/<purpose>_launch.py
+  - Config files: <package_name>/config/<config_name>.yaml
+- *Naming Conventions*: 
+  - Follow REP 103 (Standard Units): https://www.ros.org/reps/rep-0103.html
+  - Follow REP 105 (Coordinate Frames): https://www.ros.org/reps/rep-0105.html
+  - Use snake_case for all links and joints
+- *Package Structure*: ROS 2 Humble ament_cmake conventions (https://docs.ros.org/en/humble/How-To-Guides/Ament-CMake-Documentation.html)
+
+All code examples in Weeks 3-12 MUST reference these standards with inline comments.
+
+*Activities:*  ← Your existing activities continue here
+
+*Weeks 2-3:* Chapters 1-2 (Intro to Physical AI)
+...
 
 ### Week 1-2 Content: Introduction to Physical AI
 - [ ] Write chapter: Foundations of Physical AI (800-1000 words)
@@ -126,49 +182,49 @@ description: "Task list for Documentation Reproducibility feature implementation
 
 #### Week 1-2: Introduction to Physical AI (plan.md Week 1-2)
 
-- [ ] *T010:* Write "Foundations of Physical AI" chapter (800-1000 words)
+- [x] *T010:* Write "Foundations of Physical AI" chapter (800-1000 words)
   - Define Physical AI and embodied intelligence
   - Explain difference from digital-only AI
   - Provide real-world examples (humanoids, drones, autonomous vehicles)
 
-- [ ] *T011:* Write "Humanoid Robotics Landscape" chapter (800-1000 words)
+- [x] *T011:* Write "Humanoid Robotics Landscape" chapter (800-1000 words)
   - Overview of current humanoid robots (Unitree, Boston Dynamics, Tesla Bot)
   - Use cases and applications
   - Market trends and future directions
 
-- [ ] *T012:* Write "Sensor Systems Overview" chapter (800-1000 words)
+- [x] *T012:* Write "Sensor Systems Overview" chapter (800-1000 words)
   - LiDAR, cameras, IMUs, force/torque sensors
   - How sensors enable physical world interaction
   - Sensor fusion basics
 
-- [ ] *T013:* Create Physical AI system architecture diagram (Mermaid)
+- [x] *T013:* Create Physical AI system architecture diagram (Mermaid)
   - Show flow: Sensors → Perception → Planning → Control → Actuators
 
 ---
 
 #### Week 3-5: ROS 2 Fundamentals (plan.md Week 3-5)
 
-- [ ] *T014:* Write "ROS 2 Architecture" chapter (900-1100 words)
+- [x] *T014:* Write "ROS 2 Architecture" chapter (900-1100 words)
   - ROS 2 core concepts (nodes, topics, services, actions)
   - Comparison with ROS 1
   - When to use ROS 2
 
-- [ ] *T015:* Write "Building ROS 2 Packages" chapter (900-1100 words)
+- [x] *T015:* Write "Building ROS 2 Packages" chapter (900-1100 words)
   - Package structure and conventions
   - CMakeLists.txt and package.xml explained
   - Creating your first package walkthrough
 
-- [ ] *T016:* Create example: First ROS 2 package with talker/listener nodes
+- [x] *T016:* Create example: First ROS 2 package with talker/listener nodes
   - Complete working code with setup instructions
   - Expected output documented
   - Troubleshooting section included
 
-- [ ] *T017:* Create example: ROS 2 launch files and parameter management
+- [x] *T017:* Create example: ROS 2 launch files and parameter management
   - Launch file syntax and best practices
   - Parameter configuration examples
   - Multi-node launch scenarios
 
-- [ ] *T018:* Test all ROS 2 examples in clean Ubuntu 22.04 environment
+- [x] *T018:* Test all ROS 2 examples in clean Ubuntu 22.04 environment
   - Verify exit code 0 for all examples
   - Document dependency installation steps
   - Record execution time benchmarks
@@ -177,51 +233,51 @@ description: "Task list for Documentation Reproducibility feature implementation
 
 #### Week 6-7: Robot Simulation with Gazebo (plan.md Week 6-7)
 
-- [ ] *T019:* Write "Gazebo Simulation Setup" chapter (900-1100 words)
-- [ ] *T020:* Write "URDF Robot Descriptions" chapter (900-1100 words)
-- [ ] *T021:* Create example: Simple robot URDF model with sensors
-- [ ] *T022:* Create example: Gazebo world file with obstacles
-- [ ] *T023:* Test Gazebo simulation examples
+- [x] *T019:* Write "Gazebo Simulation Setup" chapter (900-1100 words)
+- [x] *T020:* Write "URDF Robot Descriptions" chapter (900-1100 words)
+- [x] *T021:* Create example: Simple robot URDF model with sensors
+- [x] *T022:* Create example: Gazebo world file with obstacles
+- [x] *T023:* Test Gazebo simulation examples
 
 ---
 
 #### Week 8-10: NVIDIA Isaac Platform (plan.md Week 8-10)
 
-- [ ] *T024:* Write "Isaac Sim Introduction" chapter (1000-1200 words)
-- [ ] *T025:* Write "AI Perception Pipelines" chapter (1000-1200 words)
-- [ ] *T026:* Write "Reinforcement Learning Basics" chapter (1000-1200 words)
-- [ ] *T027:* Create example: Isaac Sim scene setup (or document cloud alternative)
-- [ ] *T028:* Document Isaac Sim hardware requirements and limitations
+- [x] *T024:* Write "Isaac Sim Introduction" chapter (1000-1200 words)
+- [x] *T025:* Write "AI Perception Pipelines" chapter (1000-1200 words)
+- [x] *T026:* Write "Reinforcement Learning Basics" chapter (1000-1200 words)
+- [x] *T027:* Create example: Isaac Sim scene setup (or document cloud alternative)
+- [x] *T028:* Document Isaac Sim hardware requirements and limitations
 
 ---
 
 #### Week 11-12: Humanoid Robot Development (plan.md Week 11-12)
 
-- [ ] *T029:* Write "Humanoid Kinematics" chapter (1000-1200 words)
-- [ ] *T030:* Write "Bipedal Locomotion Control" chapter (1000-1200 words)
-- [ ] *T031:* Write "Human-Robot Interaction Design" chapter (1000-1200 words)
-- [ ] *T032:* Create example: Basic locomotion controller
-- [ ] *T033:* Create diagram: Humanoid kinematic chain
+- [x] *T029:* Write "Humanoid Kinematics" chapter (1000-1200 words)
+- [x] *T030:* Write "Bipedal Locomotion Control" chapter (1000-1200 words)
+- [x] *T031:* Write "Human-Robot Interaction Design" chapter (1000-1200 words)
+- [x] *T032:* Create example: Basic locomotion controller
+- [x] *T033:* Create diagram: Humanoid kinematic chain
 
 ---
 
 #### Week 13: Conversational Robotics (plan.md Week 13)
 
-- [ ] *T034:* Write "GPT Integration for Robots" chapter (800-1000 words)
-- [ ] *T035:* Write "Voice-to-Action Pipeline" chapter (800-1000 words)
-- [ ] *T036:* Create example: Voice command processor with OpenAI Whisper
-- [ ] *T037:* Write capstone project guide with requirements and starter code
-- [ ] *T038:* Create capstone architecture diagram
+- [x] *T034:* Write "GPT Integration for Robots" chapter (800-1000 words)
+- [x] *T035:* Write "Voice-to-Action Pipeline" chapter (800-1000 words)
+- [x] *T036:* Create example: Voice command processor with OpenAI Whisper
+- [x] *T037:* Write capstone project guide with requirements and starter code
+- [x] *T038:* Create capstone architecture diagram
 
 ---
 
 #### Cross-Cutting Tasks
 
-- [ ] *T039:* Create hardware requirements reference page (workstation, edge, robot specs)
-- [ ] *T040:* Write Ubuntu 22.04 + ROS 2 Humble installation guide
-- [ ] *T041:* Create troubleshooting guide (common errors and solutions)
-- [ ] *T042:* Configure Docusaurus sidebar navigation for all chapters
-- [ ] *T043:* Review all chapters for consistent tone and terminology
+- [x] *T039:* Create hardware requirements reference page (workstation, edge, robot specs)
+- [x] *T040:* Write Ubuntu 22.04 + ROS 2 Humble installation guide
+- [x] *T041:* Create troubleshooting guide (common errors and solutions)
+- [x] *T042:* Configure Docusaurus sidebar navigation for all chapters
+- [x] *T043:* Review all chapters for consistent tone and terminology
 
 ---
 
@@ -285,6 +341,71 @@ Task: "Draft a simulation file (URDF/SDF/launch) example with full path structur
 
 ---
 
+### User Story 2: Create Engaging, Modern Website Design
+
+*As a* visitor to the Physical AI book website  
+*I want* an attractive, modern, and intuitive interface  
+*So that* I feel motivated to learn and can easily find content
+
+*Acceptance Criteria:*
+- Landing page has hero section with clear value proposition
+- Feature cards highlight key curriculum modules
+- Custom color scheme and typography throughout
+- Dark mode support
+- Responsive design works on mobile and desktop
+- Navigation is intuitive and accessible
+
+# 1. Design & Branding
+
+## T101: Establish full brand guidelines (DR-003)
+- Create WCAG-AA–compliant color system (primary, secondary, background, accent) using CSS variables.
+- Define typography scale (headings, body, code), font weights, and line-height rules.
+- Define spacing scale, layout rhythm, and shadow system.
+
+## T102: Create project logo + favicon set (DR-006)
+- Design SVG logo (navbar, footer, social preview formats).
+- Provide dark/light variants.
+- Generate favicon sizes (16×16, 32×32, 64×64, etc.).
+
+---
+
+# 2. Homepage Components
+
+## T103: Build custom Hero Section (DR-001)
+- Title, tagline, CTA buttons (“Get Started”, “View on GitHub”).
+- Gradient background (optional subtle animation).
+- Fully responsive layout.
+
+## T104: Create Feature Cards component (DR-002)
+- Responsive grid (3–4 per row).
+- Icons + descriptions for:
+  - ROS 2
+  - Gazebo
+  - Isaac
+  - Humanoid Robotics
+  - Conversational AI
+- Optional linking to documentation sections.
+
+## T105: Implement full homepage layout (DR-001/002/008)
+- Combine Hero + Feature Cards.
+- Add “Why Physical AI?” or highlights section.
+- Ensure responsive behavior across breakpoints.
+- Add footer with links & copyright.
+
+---
+
+# 3. Global Styling & UI Customization
+
+## T106: Build custom.css with brand styles (DR-003)
+- CSS variable definitions (colors, spacing, radii, shadows).
+- Typography & link styles.
+- Light/dark mode mappings.
+- UI utilities.
+
+## T107: Customize the navbar (DR-006)
+- Insert SVG logo.
+- Hover/active styling.
+
 ### Phase 3: Quality Assurance & Validation
 
 *Goal:* Ensure all content meets specification requirements
@@ -323,3 +444,37 @@ Task: "Draft a simulation file (URDF/SDF/launch) example with full path structur
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
 - Avoid: vague tasks, same file conflicts, cross-story dependencies that break independence
+
+## Success Criteria
+
+*Code execution & environment validation*
+
+- [x] T201: Validate all code examples execute with exit code 0 (SC-004)
+Run each code block in a clean ROS 2 environment and verify expected output.
+
+- [x] T202: Benchmark code execution times (SC-005)
+Measure installation (<5 min) and simulation (<2 min) performance.
+
+- [x] T203: Ensure Docusaurus build passes (npm run build) (SC-006)
+Fix broken imports, MDX errors, image paths, or plugin issues.
+
+- [x] T204: Apply writing style guide + grade level check (SC-007/SC-008)
+Enforce Flesch-Kincaid grade 8–10 using automated readability tools.
+
+- [x] T205: Configure GitHub Pages CI/CD workflow (SC-009)
+Set up .github/workflows/deploy.yml for automatic deployment.
+
+- [x] T206: Lighthouse performance & accessibility audit (SC-010)
+Achieve Performance >85, Accessibility >90.
+
+- [x] T207: Validate page load performance (<3 seconds) (SC-014)
+Test using Chrome DevTools (Fast 3G or Standard 10 Mbps).
+
+- [x] T208: Test hero + feature cards across all viewports (SC-011)
+Screens: 320px, 768px, 1024px, 1440px.
+
+- [x] T209: Validate consistent branding (SC-012)
+Ensure colors, typography, and logo variants match custom.css.
+
+- [x] T210: Verify tabs, collapsible sections, and copy buttons (SC-013)
+Confirm MDX components work across mobile + desktop.

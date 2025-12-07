@@ -43,11 +43,41 @@ Modular content suitable for Docusaurus docs structure.
 
 ## Key Standards
 
-Source references required for factual claims.
-Writing level: Flesch-Kincaid grade 8–10.
-Follow Docusaurus Markdown formatting.
-Include examples, diagrams, or code blocks where relevant.
-Maintain uniform tone across all chapters.
+### Content Quality
+- Source references required for factual claims (link to official documentation)
+- Writing level: Flesch-Kincaid grade 8–10 for accessibility
+- Follow Docusaurus Markdown/MDX formatting conventions
+- Include examples, diagrams, or code blocks where relevant
+- Maintain uniform tone across all chapters (instructional, encouraging, technical but approachable)
+
+### Technical Standards
+- Platform: Docusaurus v3.x (React-based static site generator)
+- Deployment: GitHub Pages with automated CI/CD via GitHub Actions
+- Content format: MDX (Markdown with React components)
+- Code examples: Tested on Ubuntu 22.04 + ROS 2 Humble
+- All examples must include dependency installation and setup instructions
+
+### Design & User Experience
+- *Custom homepage* with hero section and feature cards showcasing curriculum modules
+- *Modern color scheme*: Professional tech palette with primary brand color, dark mode support
+- *Typography*: Clean, readable fonts (system-ui or Inter) with clear hierarchy (h1-h6)
+- *Responsive design*: Mobile-first approach, tested on mobile, tablet, and desktop viewports
+- *Navigation*: Intuitive sidebar structure, sticky navigation, breadcrumbs, and search functionality
+- *Visual elements*: Custom logo, favicon, consistent iconography throughout site
+- *Code presentation*: Syntax-highlighted code blocks with copy-to-clipboard buttons
+- *Interactive components*: Tabbed code examples (Python/C++/YAML), collapsible sections where beneficial
+
+### Accessibility & Performance
+- WCAG 2.1 AA compliance (color contrast, keyboard navigation, screen reader support)
+- Fast page load times (< 3 seconds on standard connection)
+- Optimized images (WebP format, lazy loading)
+- Clean URLs and proper meta tags for SEO
+
+### Branding Consistency
+- Consistent use of project name: "Physical AI & Humanoid Robotics"
+- Tagline: "Master robotics from ROS 2 fundamentals to conversational AI"
+- Color palette documented in custom.css with CSS variables
+- Logo usage guidelines (light/dark variants)
 
 ## Constraints
 
@@ -66,5 +96,6 @@ Ready for deployment to GitHub Pages using CI/CD.
 ## Governance
 
 This Constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews must verify compliance. Complexity must be justified.
+
 
 **Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Unknown initial adoption date | **Last Amended**: 2025-12-05
