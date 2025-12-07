@@ -7,8 +7,8 @@
   module.exports = {
     title: 'Documentation Reproducibility',
     tagline: 'Reproducible Documentation for Physical AI and Robotics',
-    url: 'https://osama-raza.github.io',
-    baseUrl: '/hackathon/',
+    url: 'https://hackathon-virid-zeta.vercel.app',
+    baseUrl: '/',
     onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
@@ -21,13 +21,11 @@
         ({
           docs: {
             sidebarPath: require.resolve('./sidebars.js'),
-            // Please change this to your repo.
-            editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+            editUrl: 'https://github.com/Osama-Raza/hackathon/edit/main/',
           },
           blog: {
             showReadingTime: true,
-            // Please change this to your repo.
-            editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/blog/',
+            editUrl: 'https://github.com/Osama-Raza/hackathon/edit/main/',
           },
           theme: {
             customCss: require.resolve('./src/css/custom.css'),
