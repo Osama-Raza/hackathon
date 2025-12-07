@@ -7,12 +7,12 @@
   module.exports = {
     title: 'Documentation Reproducibility',
     tagline: 'Reproducible Documentation for Physical AI and Robotics',
-    url: 'https://your-username.github.io',
-    baseUrl: '/',
+    url: 'https://osama-raza.github.io',
+    baseUrl: '/hackathon/',
     onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
-    organizationName: 'your-username', // Usually your GitHub org/user name.
+    organizationName: 'Osama-Raza', // Usually your GitHub org/user name.
     projectName: 'hackathon', // Usually your repo name.
     presets: [
       [
