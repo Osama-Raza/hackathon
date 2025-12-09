@@ -31,9 +31,9 @@ I am facing problem in vercel https://hackathon-virid-zeta.vercel.app/. It is on
 Fixed the Vercel deployment issue by updating the Docusaurus configuration to handle the base URL correctly for Vercel deployment. The issue was that the baseUrl was set to '/hackathon/' which works for GitHub Pages deployment but not for Vercel deployment where the site is served from the root path.
 
 Changes made:
-1. Updated docusaurus.config.js to use environment variables for URL and baseUrl
-2. Added vercel.json to configure Vercel-specific settings
-3. Modified the configuration to detect Vercel environment and use appropriate base URL
+1. Updated docusaurus.config.js to use a DEPLOYMENT_ENV environment variable to detect Vercel vs GitHub Pages deployment
+2. Added vercel.json to configure Vercel-specific settings with DEPLOYMENT_ENV=vercel
+3. Modified the configuration to use appropriate URL and baseUrl based on the deployment environment
 
 ## Outcome
 
