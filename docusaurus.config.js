@@ -7,8 +7,8 @@
   module.exports = {
     title: 'Documentation Reproducibility',
     tagline: 'Reproducible Documentation for Physical AI and Robotics',
-    url: 'https://osama-raza.github.io',
-    baseUrl: '/hackathon/',
+    url: process.env.URL || process.env.VERCEL_URL || 'https://osama-raza.github.io',
+    baseUrl: process.env.BASE_URL || (process.env.VERCEL_URL ? '/' : '/hackathon/'),
     onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn', // TODO: migrate to markdown.hooks.onBrokenMarkdownLinks in Docusaurus v4
     favicon: 'img/favicon.ico',

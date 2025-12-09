@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "framework": "docusaurus",
+  "github": {
+    "enabled": true
+  },
+  "env": {
+    "VERCEL_URL": "https://hackathon-virid-zeta.vercel.app"
+  }
+}
