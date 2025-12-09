@@ -36,6 +36,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Examples',
+          key: 'week3-5-examples',
           items: [
             'examples/ros2/talker-listener-example',
             'examples/ros2/launch-files-example',
@@ -53,6 +54,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Examples',
+          key: 'week6-7-examples',
           items: [
             'examples/gazebo/simple-robot-urdf',
             'examples/gazebo/simple-world-file',
@@ -71,6 +73,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Examples',
+          key: 'week8-10-examples',
           items: [
             'examples/isaac/isaac-sim-setup'
           ]
@@ -88,6 +91,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Examples',
+          key: 'week11-12-examples',
           items: [
             'examples/humanoid/locomotion-controller'
           ]
@@ -105,6 +109,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Examples',
+          key: 'week13-examples',
           items: [
             'examples/voice/voice-command-processor'
           ]

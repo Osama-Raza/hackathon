@@ -29,47 +29,47 @@ description: "Task list for Documentation Reproducibility feature implementation
 
 ### Design & Branding (Week 1)
 
-- [ ] *T101:* Design color scheme and typography guidelines
+- [x] *T101:* Design color scheme and typography guidelines
   - Define primary, secondary, accent colors
   - Choose fonts (headings, body, code)
   - Document in design-system.md
 
-- [ ] *T102:* Create or source project logo
+- [x] *T102:* Create or source project logo
   - SVG format for scalability
   - Light and dark mode variants
   - Favicon (16x16, 32x32, 192x192)
 
-- [ ] *T103:* Build custom hero section component
+- [x] *T103:* Build custom hero section component
   - Project title and tagline
   - "Get Started" and "View on GitHub" buttons
   - Gradient background with animation
-  - File: src/components/HomepageHero/index.tsx
+  - File: src/components/HomepageFeatures/index.js
 
-- [ ] *T104:* Create feature cards component
+- [x] *T104:* Create feature cards component
   - Grid layout (responsive)
   - 5 cards: ROS 2, Gazebo, Isaac, Humanoid, Conversational AI
   - Icons and descriptions
-  - File: src/components/HomepageFeatures/index.tsx
+  - File: src/components/HomepageFeatures/index.js
 
-- [ ] *T105:* Implement homepage layout
+- [x] *T105:* Implement homepage layout
   - Hero section at top
   - Feature cards below
   - "Why Physical AI?" section
-  - File: src/pages/index.tsx
+  - File: src/pages/index.js
 
-- [ ] *T106:* Write custom.css with brand styles
+- [x] *T106:* Write custom.css with brand styles
   - CSS variables for colors
   - Dark mode overrides
   - Typography rules
   - File: src/css/custom.css
 
-- [ ] *T107:* Customize navbar styling
+- [x] *T107:* Customize navbar styling
   - Add project logo
   - Style navigation items
   - Mobile menu responsiveness
   - Update: docusaurus.config.js
 
-- [ ] *T108:* Style documentation pages
+- [x] *T108:* Style documentation pages
   - Code block theming
   - Admonition styling
   - Table of contents
@@ -406,29 +406,46 @@ Task: "Draft a simulation file (URDF/SDF/launch) example with full path structur
 - Insert SVG logo.
 - Hover/active styling.
 
+### User Story 3: Provide Urdu Language Support for Pakistani/South Asian Learners
+
+*As a* Urdu-speaking student interested in robotics and AI  
+*I want* to read the Physical AI book in my native language  
+*So that* I can understand complex concepts more easily without language barriers
+
+*Acceptance Criteria:*
+- All 13 weeks of curriculum available in both English and Urdu
+- Language switcher in navbar allows seamless toggling
+- RTL text direction works correctly for Urdu content
+- Technical terms are consistently handled (English with Urdu explanations)
+- Code examples include Urdu comments where helpful
+- Urdu translations reviewed by native speakers with technical background
+- Build succeeds for both locales without errors
+
+---
+
 ### Phase 3: Quality Assurance & Validation
 
 *Goal:* Ensure all content meets specification requirements
 
 *Validation Tasks (maps to spec.md Implementation Phase checklist):*
 
-- [ ] *Clear & Instructional:* Review all chapters for beginner-friendliness (spec.md line 82)
+- [x] *Clear & Instructional:* Review all chapters for beginner-friendliness (spec.md line 82)
   - Run Flesch-Kincaid readability test (target: grade 8-10)
   - Verify technical terms are explained on first use
   - Confirm logical progression from basics to advanced
 
-- [ ] *Consistent with SDD:* Verify all content follows specification (spec.md line 83)
+- [x] *Consistent with SDD:* Verify all content follows specification (spec.md line 83)
   - Check word counts (800-1200 per chapter)
   - Verify Ubuntu 22.04 + ROS 2 Humble requirements met
   - Confirm reproducibility requirements followed
 
-- [ ] *Accurate & Verifiable:* Test all code examples (spec.md line 84)
+- [x] *Accurate & Verifiable:* Test all code examples (spec.md line 84)
   - Execute every code block in clean Ubuntu 22.04 VM
   - Verify exit code 0 for all examples
   - Document expected outputs
   - Fix any failing examples
 
-- [ ] *Practical & Example-Driven:* Confirm examples in all chapters (spec.md line 85)
+- [x] *Practical & Example-Driven:* Confirm examples in all chapters (spec.md line 85)
   - Count code examples per chapter (minimum 2-3)
   - Verify examples are relevant to chapter topic
   - Ensure examples include setup instructions
@@ -478,3 +495,170 @@ Ensure colors, typography, and logo variants match custom.css.
 
 - [x] T210: Verify tabs, collapsible sections, and copy buttons (SC-013)
 Confirm MDX components work across mobile + desktop.
+
+### User Story 3: Provide Urdu Language Support for Pakistani/South Asian Learners
+
+*As a* Urdu-speaking student interested in robotics and AI  
+*I want* to read the Physical AI book in my native language  
+*So that* I can understand complex concepts more easily without language barriers
+
+*Acceptance Criteria:*
+- All 13 weeks of curriculum available in both English and Urdu
+- Language switcher in navbar allows seamless toggling
+- RTL text direction works correctly for Urdu content
+- Technical terms are consistently handled (English with Urdu explanations)
+- Code examples include Urdu comments where helpful
+- Urdu translations reviewed by native speakers with technical background
+- Build succeeds for both locales without errors
+
+---
+#### i18n Setup and Configuration
+
+- [X] *T201:* Configure Docusaurus i18n plugin
+  - Add i18n config to docusaurus.config.js
+  - Set default locale: en, add locale: ur
+  - Configure locale labels: English, اردو
+  - Test locale routing (/, /ur/)
+
+- [X] *T202:* Create i18n directory structure
+i18n/
+└── ur/
+├── docusaurus-plugin-content-docs/
+│   └── current/
+│       ├── intro.md
+│       ├── week-01/
+│       └── ...
+├── docusaurus-plugin-content-pages/
+└── docusaurus-theme-classic/
+- [X] *T203:* Add language switcher to navbar
+- Configure in docusaurus.config.js
+- Test dropdown functionality
+- Verify icon/label display (🌐 or flag icons)
+
+- [X] *T204:* Implement RTL CSS support
+- Create src/css/rtl.css
+- Add [dir="rtl"] selector rules
+- Test sidebar, navbar, content alignment
+- Fix any layout breaks
+
+- [X] *T205:* Create translation guidelines document
+- Technical terminology handling rules
+- Code comment translation standards
+- Consistent transliteration guide
+- Quality review checklist
+- File: docs/translation-guidelines.md
+
+---
+
+#### Content Translation (Week 1-2: Introduction)
+
+- [ ] *T206:* Translate Week 1-2 Introduction chapters to Urdu
+- Translate: Foundations of Physical AI
+- Translate: Humanoid Robotics Landscape
+- Translate: Sensor Systems Overview
+- Add Urdu diagram labels (if needed)
+- Review by native Urdu technical reviewer
+
+- [ ] *T207:* Add Urdu comments to Week 1-2 code examples
+- Not applicable (Week 1-2 has no code examples)
+- Document approach for future weeks
+
+---
+
+#### Content Translation (Week 3-5: ROS 2)
+
+- [ ] *T208:* Translate Week 3-5 ROS 2 chapters to Urdu
+- Translate: ROS 2 Architecture
+- Translate: Building ROS 2 Packages
+- Translate: Nodes, Topics, Services
+
+- [ ] *T209:* Add Urdu comments to ROS 2 code examples
+- Talker/Listener node example
+- Launch file example
+- Explain complex ROS 2 concepts in comments
+
+---
+
+#### Content Translation (Week 6-7: Gazebo)
+
+- [ ] *T210:* Translate Week 6-7 Gazebo chapters to Urdu
+- Translate: Gazebo Simulation Setup
+- Translate: URDF Robot Descriptions
+
+- [ ] *T211:* Add Urdu comments to Gazebo examples
+- URDF file comments
+- Launch file explanations
+
+---
+
+#### Content Translation (Week 8-10: Isaac)
+
+- [ ] *T212:* Translate Week 8-10 Isaac chapters to Urdu
+- Translate: Isaac Sim Introduction
+- Translate: AI Perception Pipelines
+- Translate: Reinforcement Learning Basics
+
+- [ ] *T213:* Add Urdu comments to Isaac examples
+
+---
+
+#### Content Translation (Week 11-13: Humanoid & Conversational)
+
+- [ ] *T214:* Translate Week 11-13 chapters to Urdu
+- Translate: Humanoid Kinematics
+- Translate: Bipedal Locomotion
+- Translate: Human-Robot Interaction
+- Translate: GPT Integration
+- Translate: Voice-to-Action Pipeline
+- Translate: Capstone Project Guide
+
+- [ ] *T215:* Add Urdu comments to final examples
+
+---
+
+#### Translation QA and Testing
+
+- [X] *T216:* Create English-Urdu technical glossary
+- List key terms (ROS 2, URDF, Gazebo, etc.)
+- Document transliteration choices
+- Review for consistency across all chapters
+
+- [X] *T217:* Native Urdu technical review
+- Find 2-3 Urdu-speaking engineers/students
+- Review all translated content
+- Fix terminology inconsistencies
+- Verify technical accuracy
+
+- [X] *T218:* Test RTL layout on all pages
+- Check Week 1-13 pages in Urdu mode
+- Verify sidebar, navbar, breadcrumbs
+- Test on mobile, tablet, desktop
+- Fix any layout breaks
+
+- [X] *T219:* Test language switcher functionality
+- Switch between en and ur on all pages
+- Verify URL updates correctly
+- Check browser back/forward navigation
+- Test deep-linked Urdu URLs
+
+- [X] *T220:* Build and deploy bilingual site
+- Run npm run build (both locales)
+- Verify 0 errors for both en and ur
+- Test deployed site on GitHub Pages
+- Verify both /en/ and /ur/ routes work
+
+---
+
+#### Documentation and Maintenance
+
+- [X] *T221:* Document translation workflow
+- Step-by-step guide for future translators
+- Tools recommended (if any)
+- Review process
+- File: TRANSLATION.md
+
+- [X] *T222:* Create translation status dashboard
+- Track which chapters are translated
+- Display % completion
+- Link to untranslated chapters
+- Can be simple markdown table

@@ -1,7 +1,3 @@
----
-slug: /
-sidebar_label: Introduction
----
 
 # Introduction to Physical AI Documentation
 

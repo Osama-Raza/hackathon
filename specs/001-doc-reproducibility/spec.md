@@ -76,6 +76,30 @@ Users can successfully run all code examples provided with:
     - *Theme Customization*: When implementing custom.css overrides or swizzling components
     - *Build Troubleshooting*: When encountering Docusaurus-specific errors during npm run build
     - *NOT for*: General content writing, ROS 2 technical questions, or robotics concepts
+
+### Internationalization Requirements
+
+-   *FR-011*: The documentation MUST support Urdu (اردو) as a secondary language alongside English.
+
+-   *FR-012*: All chapter content, navigation elements, and UI text MUST be translatable to Urdu while maintaining technical accuracy.
+
+-   *FR-013*: A language switcher MUST be present in the navbar allowing users to toggle between English and Urdu.
+
+-   *FR-014*: Code examples MUST remain in English (Python, C++, YAML) with inline Urdu comments explaining complex logic where beneficial for Urdu readers.
+
+-   *FR-015*: Technical terminology (ROS 2, Gazebo, URDF, etc.) MUST remain in English with Urdu explanations in parentheses on first usage.
+
+-   *FR-016*: The Urdu translation MUST follow Docusaurus i18n structure with files in /i18n/ur/docusaurus-plugin-content-docs/current/ directory.
+
+-   *FR-017*: Right-to-left (RTL) text direction MUST be automatically applied when Urdu language is selected.
+
+-   *FR-018*: URLs MUST support locale prefixes (e.g., /ur/week-01/intro for Urdu, /week-01/intro for English).
+
+-   *FR-019*: Translation completeness MUST be tracked, with clear indication of which chapters have Urdu translations available.
+
+-   *FR-020*: All translations MUST be reviewed by native Urdu speakers with technical background to ensure accuracy and clarity.
+
+
 ### Design and User Experience Requirements
 
 -   *DR-001*: The homepage MUST include a custom hero section with project title ("Physical AI & Humanoid Robotics"), tagline, and two call-to-action buttons ("Get Started" and "View on GitHub") on a gradient background.

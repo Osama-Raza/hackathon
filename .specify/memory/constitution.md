@@ -1,6 +1,6 @@
 <!--
 Sync Impact Report:
-Version change: None (initial creation) → 1.0.0 (MINOR: Initial constitution with core principles)
+Version change: 1.0.0 → 1.0.1 (PATCH: Updated ratification date and governance information)
 Modified principles: None
 Added sections:
 - Clear, Structured, and Instructional Writing
@@ -20,7 +20,7 @@ Templates requiring updates:
 - CLAUDE.md: ⚠ pending
 - .specify/templates/commands/sp.constitution.md: ✅ updated (this file)
 Follow-up TODOs:
-- RATIFICATION_DATE: Unknown initial adoption date
+
 -->
 # AI-Driven Development Documentation Constitution
 
@@ -98,4 +98,4 @@ Ready for deployment to GitHub Pages using CI/CD.
 This Constitution supersedes all other practices. Amendments require documentation, approval, and a migration plan. All PRs/reviews must verify compliance. Complexity must be justified.
 
 
-**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): Unknown initial adoption date | **Last Amended**: 2025-12-05
+**Version: 1.0.1 | Ratified: 2025-12-05 | Last Amended: 2025-12-07

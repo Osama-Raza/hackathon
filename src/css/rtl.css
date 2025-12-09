@@ -1,0 +1,71 @@
+/* RTL (Right-to-Left) CSS support for Urdu language */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* RTL adjustments for Docusaurus components */
+[dir="rtl"] .navbar {
+  text-align: right;
+}
+
+[dir="rtl"] .navbar__item {
+  margin-left: 0;
+  margin-right: var(--ifm-navbar-item-padding-horizontal);
+}
+
+[dir="rtl"] .navbar__items--right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+[dir="rtl"] .menu__list-item {
+  text-align: right;
+}
+
+[dir="rtl"] .pagination-nav__link--next {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .pagination-nav__label {
+  margin-left: 0;
+  margin-right: var(--ifm-global-spacing);
+}
+
+[dir="rtl"] .theme-edit-this-page {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .theme-edit-this-page svg {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* RTL adjustments for sidebar */
+[dir="rtl"] .sidebar {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* RTL adjustments for doc items */
+[dir="rtl"] .doc-sidebar-container {
+  border-left: none;
+  border-right: 1px solid var(--ifm-toc-border-color);
+}
+
+[dir="rtl"] .doc-page {
+  padding-left: 0;
+  padding-right: var(--ifm-spacing-horizontal);
+}
+
+/* RTL adjustments for code blocks */
+[dir="rtl"] .prism-code {
+  direction: ltr;
+  text-align: left;
+}
+
+/* RTL adjustments for search */
+[dir="rtl"] .navbar__search {
+  margin-left: 0;
+  margin-right: var(--ifm-navbar-item-padding-horizontal);
+}

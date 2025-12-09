@@ -133,6 +133,15 @@ The top-level sections of the book will be based on the following 13-week curric
     - Performance optimization techniques (lazy loading, image optimization)
     - Responsive design implementation approach
     - Trade-offs between visual appeal and maintainability
+-   ### [ADR-0005: Multilingual Support Implementation Strategy](history/adr/0005-multilingual-support-urdu-translation.md)
+    Decision on implementing Urdu translation support using Docusaurus i18n plugin. Includes rationale for:
+    - Translation approach (human translation vs. machine translation with review vs. hybrid)
+    - File structure and organization (i18n directory vs. separate repo)
+    - RTL layout handling and CSS adjustments needed
+    - Technical terminology translation guidelines (keep English terms vs. transliterate vs. translate)
+    - Maintenance strategy for keeping translations in sync with English updates
+    - Deployment considerations (single site with locales vs. separate domains)
+    - Trade-offs between translation quality, cost, and maintenance burden
 
 ## VI. Testing Strategy
 **Goal**: Describe how the documentation and its examples will be tested.
@@ -162,6 +171,18 @@ The top-level sections of the book will be based on the following 13-week curric
     - Create custom.css with brand colors and typography
     - Build feature cards component for landing page
     - Add project logo and favicon
+    - Configure Docusaurus i18n plugin for Urdu language support
+    - Set up /i18n/ur/ directory structure
+    - Add language switcher to navbar with English/اردو toggle
+    - Configure RTL CSS rules for Urdu text direction
+    - Create translation guidelines document for maintaining consistency
+
+**Deliverables:**
+
+- [X] *Docusaurus i18n configured with Urdu locale*
+- [X] *Language switcher functional in navbar*
+- [X] *RTL CSS rules defined*
+- [X] *Translation guidelines documented*
 
 **Phase 2: Core Documentation Infrastructure**
 - **Milestone**: Docusaurus site capable of building and deploying to GitHub Pages, basic content structure defined.
@@ -169,6 +190,46 @@ The top-level sections of the book will be based on the following 13-week curric
     - Configure Docusaurus build process.
     - Set up CI/CD for automated deployment to GitHub Pages.
     - Define initial sidebar structure and content organization based on general curriculum principles.
+**Translation Workflow:**
+1. Complete English chapter first
+2. Extract translatable content (excluding code blocks)
+3. Translate chapter content to Urdu
+4. Add Urdu comments to complex code examples
+5. Review translation with native Urdu technical reviewer
+6. Test RTL rendering and fix layout issues
+7. Mark chapter as translation-complete
+
+### Phase 2.5: Content Translation (Weeks 6-9) OR (Parallel with Phase 2)
+
+*Goals:*
+- Translate all 13 weeks of English content to Urdu
+- Ensure technical accuracy and readability
+- Maintain consistent terminology across chapters
+- Verify RTL layout integrity
+
+*Activities:*
+
+*Translation Workflow:*
+1. Complete English chapter first
+2. Extract translatable content (excluding code blocks)
+3. Translate chapter content to Urdu
+4. Add Urdu comments to complex code examples
+5. Review translation with native Urdu technical reviewer
+6. Test RTL rendering and fix layout issues
+7. Mark chapter as translation-complete
+
+*Week-by-Week Translation Schedule:*
+- Week 6: Translate Weeks 1-2 content (Introduction to Physical AI)
+- Week 7: Translate Weeks 3-5 content (ROS 2 Fundamentals)
+- Week 8: Translate Weeks 6-7 content (Gazebo Simulation)
+- Week 9: Translate Weeks 8-13 content (Isaac, Humanoid, Conversational AI)
+
+*Deliverables:*
+- [ ] All 13 weeks translated to Urdu
+- [X] Translation review completed by native speakers
+- [X] Technical terminology glossary (English-Urdu)
+- [X] RTL layout tested on all pages
+- [X] Language switcher tested across all routes
 
 **Phase 3: Content Generation & Integration**
 - **Milestone**: Initial documentation content generated, adhering to Context7 Docusaurus guidelines.
