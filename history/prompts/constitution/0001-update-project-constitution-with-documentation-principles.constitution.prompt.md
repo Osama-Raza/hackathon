@@ -89,6 +89,8 @@ Practical, example-driven explanations
 
 Modular content suitable for Docusaurus docs structure
 
+Multilingual support to reach global learners
+
 
 
 ---
@@ -105,7 +107,15 @@ Include examples, diagrams, or code blocks where relevant
 
 Maintain uniform tone across all chapters
 
+## Internationalization Standards
 
+- *Primary Language*: English (default for all content)
+- *Secondary Language*: Urdu translation for all chapters
+- *Translation Quality*: Professional-grade translations maintaining technical accuracy
+- *Code Examples*: Remain in English with Urdu comments explaining functionality
+- *UI Elements*: Bilingual interface with language switcher in navbar
+- *File Structure*: Separate /i18n/ur/ directory following Docusaurus i18n conventions
+- *Consistency*: Urdu translations must match English content structure and completeness
 
 ---
 

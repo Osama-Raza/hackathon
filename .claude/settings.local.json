@@ -7,7 +7,19 @@
       "Bash(npm run test-build)",
       "Bash(chmod +x scripts/setup_ros_env.sh)",
       "Bash(.specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks)",
-      "Bash(git add .)"
+      "Bash(git add .)",
+      "Bash(npm run build)",
+      "Bash(npx docusaurus start --port 3002)",
+      "Bash(npx docusaurus start --port 3003)",
+      "Bash(npx docusaurus serve)",
+      "Bash(npx docusaurus start --port 3004)",
+      "Bash(npx docusaurus start --port 3005)",
+      "Bash(dir i18n /s)",
+      "Bash(npx docusaurus build)",
+      "Bash(npx serve -l 3002 build)",
+      "Bash(npx docusaurus serve --port 3002)",
+      "Bash(findstr :3002)",
+      "Bash(npx docusaurus serve:*)"
     ],
     "deny": [],
     "ask": []

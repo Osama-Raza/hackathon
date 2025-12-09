@@ -7,13 +7,26 @@
   module.exports = {
     title: 'Documentation Reproducibility',
     tagline: 'Reproducible Documentation for Physical AI and Robotics',
-    url: 'https://hackathon-virid-zeta.vercel.app',
-    baseUrl: '/',
+    url: 'https://osama-raza.github.io',
+    baseUrl: '/hackathon/',
     onBrokenLinks: 'warn',
-    onBrokenMarkdownLinks: 'warn',
+    onBrokenMarkdownLinks: 'warn', // TODO: migrate to markdown.hooks.onBrokenMarkdownLinks in Docusaurus v4
     favicon: 'img/favicon.ico',
     organizationName: 'Osama-Raza', // Usually your GitHub org/user name.
     projectName: 'hackathon', // Usually your repo name.
+    i18n: {
+      defaultLocale: 'en',
+      locales: ['en', 'ur'],
+      localeConfigs: {
+        en: {
+          label: 'English',
+        },
+        ur: {
+          label: 'اردو',
+          direction: 'rtl',
+        },
+      },
+    },
     presets: [
       [
         '@docusaurus/preset-classic',
@@ -24,7 +37,7 @@
             editUrl: 'https://github.com/Osama-Raza/hackathon/edit/main/',
           },
           blog: {
-            showReadingTime: true,
+            showReadingTime: false,
             editUrl: 'https://github.com/Osama-Raza/hackathon/edit/main/',
           },
           theme: {
@@ -41,7 +54,7 @@
           title: 'Documentation Reproducibility',
           logo: {
             alt: 'Physical AI Logo',
-            src: 'img/logo.svg',
+            src: 'img/logo.jpeg',
           },
           items: [
             {
@@ -51,7 +64,11 @@
               label: 'Tutorial',
             },
             {
-              href: 'https://github.com/Osama-Raza',
+              type: 'localeDropdown',
+              position: 'right',
+            },
+            {
+              href: 'https://github.com/Osama-Raza/hackathon',
               label: 'GitHub',
               position: 'right',
             },
