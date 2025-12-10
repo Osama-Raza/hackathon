@@ -1,11 +1,12 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "framework": "docusaurus",
-  "github": {
-    "enabled": true
+ "rewrites": [
+  {
+    "source": "/hackathon/:path*",
+    "destination": "/:path*"
   },
-  "environment": {
-    "DEPLOYMENT_ENV": "vercel"
+  {
+    "source": "/hackathon",
+    "destination": "/"
   }
+ ]
 }
