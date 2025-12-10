@@ -8,7 +8,7 @@
     title: 'Documentation Reproducibility',
     tagline: 'Reproducible Documentation for Physical AI and Robotics',
     url: process.env.DEPLOYMENT_ENV === 'vercel' ? 'https://hackathon-virid-zeta.vercel.app' : 'https://osama-raza.github.io',
-    baseUrl: process.env.DEPLOYMENT_ENV === 'vercel' ? '/' : '/',
+    baseUrl: process.env.DEPLOYMENT_ENV === 'vercel' ? '/' : '/hackathon/',
     onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn', // TODO: migrate to markdown.hooks.onBrokenMarkdownLinks in Docusaurus v4
     favicon: 'img/favicon.ico',
